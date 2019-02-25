@@ -2,6 +2,8 @@
 
 set -e 
 
+az extension add -n azure-devops
+
 az -h
 
 if [ -z "$AZURE_PIPELINE_ORGANIZATION" ]; 
