@@ -2,6 +2,8 @@
 
 set -e 
 
+az -h
+
 if [ -z "$AZURE_PIPELINE_ORGANIZATION" ]; 
 then
     echo "\$AZURE_PIPELINE_ORGANIZATION is not set." >&2
