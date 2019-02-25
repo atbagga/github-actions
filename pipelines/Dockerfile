@@ -1,5 +1,4 @@
 FROM microsoft/azure-cli
-RUN az extension add -n azure-devops  
 
 RUN apk update \
   && apk add --no-cache jq
@@ -11,7 +10,6 @@ LABEL com.github.actions.name="Trigger Azure Pipelines"
 LABEL com.github.actions.description="GitHub Action to trigger Azure pipeline"
 LABEL com.github.actions.color="blue"
 
-RUN az -h
 COPY entrypoint.sh /entrypoint.sh  
 RUN chmod +x /entrypoint.sh 
 
